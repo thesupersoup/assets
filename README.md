@@ -1,0 +1,2 @@
+# assets
+The ingame structure
