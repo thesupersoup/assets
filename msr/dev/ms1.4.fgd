@@ -1166,3 +1166,12 @@
 	]
 	master(string) : "master"
 ]
+
+@SolidClass base(Targetname,Renderless) = func_playerclip : "Player clip brush"
+[
+	dmg(integer) : "Push amount if blocked while toggling" : 0
+	spawnflags(flags) =
+	[
+		1: "Start ON" : 0
+	]
+]

@@ -1263,7 +1263,12 @@
 
 @SolidClass base(Targetname,Renderless) = func_ladder : "Ladder" []
 
-@SolidClass base(Targetname,Renderless) = func_monsterclip : "Monster clip brush" []
+@SolidClass base(Targetname,Renderless) = func_monsterclip : "Monster clip brush" [
+	spawnflags(flags) =
+	[
+		1: "Start ON" : 0
+	]
+]
 
 @SolidClass base(Targetname,Renderless) = func_mortar_field : "Mortar Field" 
 [
