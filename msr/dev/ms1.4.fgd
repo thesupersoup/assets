@@ -76,6 +76,11 @@
 [
 	angles(string) : "Pitch Yaw Roll (Y Z X)" : "0 0 0"
 ]
+@BaseClass = Targetname 
+[ 
+	targetname(target_source) : "Name"
+	note(string) : "notes"
+]
 @BaseClass = MSRenderless
 [
 	zhlt_invisible(integer) : "Renderless" : 1
