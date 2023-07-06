@@ -81,6 +81,10 @@
 	targetname(target_source) : "Name"
 	note(string) : "notes"
 ]
+@BaseClass = Target 
+[ 
+	target(target_destination) : "Target" 
+]
 @BaseClass = MSRenderless
 [
 	zhlt_invisible(integer) : "Renderless" : 1
@@ -502,10 +506,6 @@
 //
 //@BaseClass size(0 0 0, 32 32 32) color(80 0 200) base(Appearflags) = Ammo []
 //
-//@BaseClass = Target 
-//[ 
-//	target(target_destination) : "Target" 
-//]
 //@BaseClass size(-16 -16 0, 16 16 32) color(0 0 200) base(Targetname, Appearflags) = Weapon []
 //@BaseClass = Global 
 //[ 
