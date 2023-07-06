@@ -1266,7 +1266,7 @@
 @SolidClass base(Targetname,Renderless) = func_monsterclip : "Monster clip brush" [
 	spawnflags(flags) =
 	[
-		1: "Start ON" : 0
+		1: "Start OFF" : 0
 	]
 ]
 
