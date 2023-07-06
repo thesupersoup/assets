@@ -1167,7 +1167,7 @@
 	master(string) : "master"
 ]
 
-@SolidClass base(Targetname,Renderless) = ms_func_playerclip : "Player clip brush"
+@SolidClass base(Targetname,MSRenderless) = ms_func_playerclip : "Player clip brush"
 [
 	dmg(integer) : "Push amount" : 0
 	spawnflags(flags) =
