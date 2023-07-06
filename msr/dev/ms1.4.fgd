@@ -225,10 +225,6 @@
 [
 	defscriptfile(string) : "Default Script (do not change!)" : "monsters/boar3"
 ]
-@PointClass base(ms_basenpc) color(128 0 0) studio("models/monsters/boar3.mdl") = msmonster_giantboar : "Giant Boar"
-[
-	defscriptfile(string) : "Default Script (do not change!)" : "monsters/boar3"
-]
 @PointClass base(Targetname,Angles) color(128 0 0) studio("models/monsters/ogre_cave.mdl") = msmonster_random : "Randomized Monster"
 [
 	random_1_scriptfile(string) : "#1 Script File" 
