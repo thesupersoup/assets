@@ -76,6 +76,34 @@
 [
 	angles(string) : "Pitch Yaw Roll (Y Z X)" : "0 0 0"
 ]
+@BaseClass = Targetname 
+[ 
+	targetname(target_source) : "Name"
+	note(string) : "notes"
+]
+@BaseClass = Target 
+[ 
+	target(target_destination) : "Target" 
+]
+@BaseClass base(Target, Targetname) = Trigger
+[
+	killtarget(target_destination) : "Kill target"
+	netname(target_destination) : "Target Path"
+	style(integer) : "Style" : 32
+	master(string) : "Master" 
+	sounds(choices) : "Sound style" : 0 =
+	[
+		0 : "No Sound"
+	]
+	delay(string) : "Delay before trigger" : "0"
+	message(string) : "Message (set sound too!)"
+	spawnflags(flags) = 
+	[
+		1: "Monsters" : 0
+		2: "No Clients" : 0
+		4: "Pushables": 0
+	]
+]
 @BaseClass = MSRenderless
 [
 	zhlt_invisible(integer) : "Renderless" : 1
@@ -215,10 +243,6 @@
 @PointClass base(ms_basenpc) color(128 0 0) studio("models/monsters/boar2.mdl") = msmonster_bigboar : "Big Boar"
 [
 	defscriptfile(string) : "Default Script (do not change!)" : "monsters/boar2"
-]
-@PointClass base(ms_basenpc) color(128 0 0) studio("models/monsters/boar3.mdl") = msmonster_giantboar : "Giant Boar"
-[
-	defscriptfile(string) : "Default Script (do not change!)" : "monsters/boar3"
 ]
 @PointClass base(ms_basenpc) color(128 0 0) studio("models/monsters/boar3.mdl") = msmonster_giantboar : "Giant Boar"
 [
@@ -501,10 +525,6 @@
 //
 //@BaseClass size(0 0 0, 32 32 32) color(80 0 200) base(Appearflags) = Ammo []
 //
-//@BaseClass = Target 
-//[ 
-//	target(target_destination) : "Target" 
-//]
 //@BaseClass size(-16 -16 0, 16 16 32) color(0 0 200) base(Targetname, Appearflags) = Weapon []
 //@BaseClass = Global 
 //[ 
@@ -884,26 +904,6 @@
 //	bottomtrack(target_destination) : "Bottom track"
 //	speed(integer) : "Move/Rotate speed" : 0
 //]
-//
-//@BaseClass base(Target, Targetname) = Trigger
-//[
-//	killtarget(target_destination) : "Kill target"
-//	netname(target_destination) : "Target Path"
-//	style(integer) : "Style" : 32
-//	master(string) : "Master" 
-//	sounds(choices) : "Sound style" : 0 =
-//	[
-//		0 : "No Sound"
-//	]
-//	delay(string) : "Delay before trigger" : "0"
-//	message(string) : "Message (set sound too!)"
-//	spawnflags(flags) = 
-//	[
-//		1: "Monsters" : 0
-//		2: "No Clients" : 0
-//		4: "Pushables": 0
-//	]
-//]
 
 //===================== END Halflife Base Entries
 
@@ -1167,7 +1167,7 @@
 	master(string) : "master"
 ]
 
-@SolidClass base(Targetname,Renderless) = ms_func_playerclip : "Player clip brush"
+@SolidClass base(Targetname,MSRenderless) = ms_func_playerclip : "Player clip brush"
 [
 	dmg(integer) : "Push amount" : 0
 	spawnflags(flags) =
